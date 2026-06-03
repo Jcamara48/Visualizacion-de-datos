@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <dcat:CatalogRecord rdf:about="https://datos.gob.es/catalogo/a01002820-licitaciones-publicadas-2023/record">
+    <foaf:primaryTopic>
+      <dcat:Dataset rdf:about="https://datos.gob.es/catalogo/a01002820-licitaciones-publicadas-2023">
+        <dct:title xml:lang="es">Licitaciones Publicadas 2023</dct:title>
+        <dct:description xml:lang="es">Información sobre las licitaciones publicadas en los distintos Perfiles de Contratante de la Administración de la Junta de Andalucía para el año 2023 (se excluyen expedientes de contratos menores).
+
+El conjunto de datos reúne:
+
+* Datos generales del expediente
+* Información sobre el lugar de ejecución (código de la Subentidad Nacional, Subentidad Territorial y población)
+* Información sobre los lotes
+* Información sobre el tipo de procedimiento
+* Datos sobre ubicación orgánica, nombre e ID de la entidad adjudicadora
+* Información sobre plazo de presentación de oferta
+* Información sobre el plazo de presentación de solicitudes
+* Información sobre el resultado del procedimiento (resultado, lote, fecha del acuerdo, ofertas recibidas)
+* Información sobre adjudicatario
+* Información sobre importes de adjudicación
+* Información sobre publicaciones oficiales
+La publicación de los datos se realiza en cumplimiento de lo establecido en el artículo 63 de la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, por la que se transponen al ordenamiento jurídico español las Directivas del Parlamento Europeo y del Consejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014 y para facilitar el acceso a la ciudadanía, a las empresas y personas licitadoras.</dct:description>
+        <dct:publisher rdf:resource="http://datos.gob.es/recurso/sector-publico/org/Organismo/A01002820"/>
+        <dcat:theme rdf:resource="http://datos.gob.es/kos/sector-publico/sector/sector-publico"/>
+        <dcat:keyword xml:lang="es">licitaciones</dcat:keyword>
+        <dct:identifier>https://www.juntadeandalucia.es/datosabiertos/portal/dataset/4cf08cbd-e39e-4174-8a71-c4bd67bc602c</dct:identifier>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-17T08:06:33+01:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-02T12:07:53+02:00</dct:modified>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/SPA"/>
+        <dcat:distribution rdf:resource="https://datos.gob.es/catalogo/a01002820-licitaciones-publicadas-2023/resource/160209df-a222-4646-a53a-48479b79abfe"/>
+      </dcat:Dataset>
+    </foaf:primaryTopic>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-04-04T20:25:13.556360+02:00</dct:modified>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-05T10:12:44.160559+01:00</dct:issued>
+  </dcat:CatalogRecord>
+  <foaf:Agent rdf:about="http://datos.gob.es/recurso/sector-publico/org/Organismo/A01002820">
+    <foaf:name xml:lang="es">Junta de Andalucía</foaf:name>
+    <dct:identifier>A01002820</dct:identifier>
+  </foaf:Agent>
+  <dct:IMT rdf:about="https://datos.gob.es/catalogo/a01002820-licitaciones-publicadas-2023/resource/160209df-a222-4646-a53a-48479b79abfe/format">
+    <rdfs:label>ZIP</rdfs:label>
+    <rdf:value>application/zip</rdf:value>
+  </dct:IMT>
+  <dcat:Distribution rdf:about="https://datos.gob.es/catalogo/a01002820-licitaciones-publicadas-2023/resource/160209df-a222-4646-a53a-48479b79abfe">
+    <dcat:accessURL rdf:resource="https://www.juntadeandalucia.es/datosabiertos/portal/dataset/4cf08cbd-e39e-4174-8a71-c4bd67bc602c/resource/2fa8edca-7744-4ed3-a6e5-34be1e8d194e/download/2023-xml.zip"/>
+    <dct:format rdf:resource="https://datos.gob.es/catalogo/a01002820-licitaciones-publicadas-2023/resource/160209df-a222-4646-a53a-48479b79abfe/format"/>
+    <dct:license rdf:resource="http://juntadeandalucia.es/informacion/legal.html"/>
+    <dct:title xml:lang="es">XML - 2023-xml.zip</dct:title>
+    <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/zip"/>
+    <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20676128</dcat:byteSize>
+  </dcat:Distribution>
+</rdf:RDF>
