@@ -40,7 +40,7 @@ La práctica busca ir más allá de un ranking descriptivo de empresas adjudicat
 
 La fuente principal del proyecto es el conjunto de datos de licitaciones públicas de la Junta de Andalucía, obtenido a través de datos.gob.es.
 
-El dataset original se encontraba en formato XML y contenía información administrativa sobre:
+El dataset original (Raw) se encontraba en formato XML y contenía información administrativa sobre:
 
 Datos generales del expediente.
 Órgano de contratación.
@@ -71,7 +71,7 @@ Enlace o identificador del expediente, cuando estaba disponible.
 
 **5.2 Transformación y limpieza**
 
-Durante la limpieza se realizaron varias operaciones:
+Durante la limpieza se realizaron principalmente las sigioentes operaciones:
 
 Conversión de importes a formato numérico.
 Normalización de nombres de empresas.
@@ -81,64 +81,20 @@ Revisión y eliminación de duplicados derivados de publicaciones o actualizacio
 Creación de variables temporales como mes, año o trimestre.
 Clasificación manual de empresas según su relación con mercados bursátiles.
 
-Esta fase fue especialmente importante porque algunos registros administrativos podían distorsionar la lectura visual si se cargaban directamente en Flourish.
+Todo este proceso era necesario para crear datasets limpios, que ocuparan poco espacio para cargarlos directamente en herramientas de visualización como Flourish o Tableau etc
 
 **6. Datasets derivados**
 
-El proyecto no carga directamente el XML original en la herramienta de visualización. En su lugar, se generaron datasets específicos para cada gráfico.
-
-licitaciones_corregidas_deduplicadas.csv
-
-Dataset base limpio y deduplicado. Contiene los registros de licitaciones depurados, con empresas normalizadas e importes en formato numérico.
-
-visualizacion_01_gasto_publicado_2023.csv
-
-Dataset agregado por mes para mostrar la evolución temporal del gasto público.
-
-Campos principales:
-
+El proyecto no carga directamente el XML original en la herramienta de visualización. En su lugar, se generaron datasets específicos para cada gráfico, **cuyos campos princiaples** a forma de resumen incluían:
+Empresa_Canonica
 Mes
 Importe_Total
 Numero_Contratos
 Importe_Medio
 Importe_Total_Millones
-visualizacion_02_ranking_empresas_top25_corregido.csv
-
-Dataset agregado por empresa para crear el ranking de adjudicatarias con mayor volumen económico.
-
-Campos principales:
-
-Empresa_Canonica
-Importe_Total
-Importe_Total_Millones
-Numero_Contratos
-Importe_Medio
 NIFs
-visualizacion_03_cotizadas_vs_no_cotizadas.csv
 
-Dataset enriquecido con una clasificación manual de las empresas según su relación con mercados bursátiles.
-
-Categorías principales:
-
-Grupo cotizado / filial.
-Cotizada directa.
-Entidad pública.
-No cotizada / UTE.
-
-Campos principales:
-
-Empresa_Canonica
-Tipo_Empresa
-Ticker
-Mercado
-Comentario
-Importe_Total_Millones
-visualizacion_04_endesa_evento_bursatil.csv
-
-Dataset bursátil utilizado para el caso Endesa.
-
-Campos principales:
-
+En el caso del Dataset bursátil utilizado para el caso Endesa los campos principales son:
 Fecha
 Close
 Close_Base100
@@ -175,7 +131,8 @@ ElementTree: procesamiento de archivos XML.
 yfinance: descarga de datos bursátiles.
 Flourish: creación del story y visualizaciones interactivas.
 GitHub: publicación del proyecto, documentación y archivos reproducibles.
-9. Estructura del repositorio
+
+**9. Estructura del repositorio**
 .
 ├── README.md
 ├── data/
@@ -198,14 +155,18 @@ GitHub: publicación del proyecto, documentación y archivos reproducibles.
 ├── video/
 │   └── enlace_video.txt
 └── LICENSE
+
 **10. Enlace a la visualización**
 
 La visualización interactiva final está disponible en:
 
+https://app.flourish.studio/story/3695247/
 
 **11. Vídeo explicativo**
 
 El vídeo explicativo del proyecto está disponible en:
+
+
 
 **12. Reproducibilidad**
 
@@ -218,30 +179,16 @@ Ejecutar el notebook de descarga bursátil para obtener los datos de Endesa.
 Cargar los archivos CSV procesados en Flourish.
 Reconstruir las visualizaciones siguiendo la estructura del story.
 
-**13. Limitaciones**
 
-Este proyecto debe interpretarse como un análisis exploratorio.
 
-Las principales limitaciones son:
-
-Una adjudicación pública no implica necesariamente un movimiento bursátil.
-Las empresas cotizadas pueden verse afectadas por muchos otros factores: resultados financieros, tipos de interés, mercado general, dividendos o noticias sectoriales.
-Algunas adjudicatarias no cotizan directamente, sino que son filiales de grupos cotizados.
-La clasificación de empresas cotizadas se ha realizado manualmente y puede requerir revisión adicional.
-Algunos expedientes administrativos contienen fechas anteriores o actualizaciones posteriores, por lo que se debe diferenciar entre fecha de adjudicación y fecha de publicación.
-El caso Endesa se utiliza como ejemplo exploratorio y no como prueba estadística de causalidad.
-
-**14. Conclusión**
+**13. Conclusión**
 
 El proyecto muestra cómo los datos abiertos de contratación pública pueden transformarse en una herramienta visual para analizar gasto público, concentración empresarial y posibles conexiones con los mercados financieros.
-
 La principal aportación del trabajo es combinar datos administrativos con datos bursátiles, construyendo una narrativa visual que va desde la transparencia pública hasta el análisis financiero exploratorio.
 
 **15. Licencia**
 
-Este repositorio se publica con fines académicos.
-
-Se recomienda utilizar una licencia abierta, por ejemplo:
+Este repositorio se publica con fines académicos e utiliza una licencia abierta, por ejemplo:
 
 MIT License para el código.
 Creative Commons Attribution 4.0 para documentación, gráficos y textos.
