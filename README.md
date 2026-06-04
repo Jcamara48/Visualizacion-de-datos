@@ -166,6 +166,7 @@ https://app.flourish.studio/story/3695247/
 
 El vídeo explicativo del proyecto está disponible en:
 
+C:\Users\julic\OneDrive\Escritorio\UOC MASTER EN CIENCIA DE DATOS\VISUALIZACION DE DATOS JCM\ENTREGA 2
 
 
 **12. Reproducibilidad**
